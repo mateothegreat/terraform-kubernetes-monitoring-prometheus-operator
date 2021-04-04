@@ -1,5 +1,11 @@
 resource "kubernetes_manifest" "kube-state-metrics-serviceMonitor" {
 
+    depends_on = [
+
+        kubernetes_manifest.crd-servicemonitors
+
+    ]
+
     provider = kubernetes-alpha
 
     manifest = {

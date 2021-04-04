@@ -1,5 +1,11 @@
 resource "kubernetes_manifest" "node-exporter-serviceMonitor" {
 
+    depends_on = [
+
+        kubernetes_manifest.crd-servicemonitors
+
+    ]
+
     provider = kubernetes-alpha
 
     manifest = {
