@@ -5,21 +5,21 @@ terraform {
         kubernetes-alpha = {
 
             source  = "hashicorp/kubernetes-alpha"
-            version = "0.2.1"
+            version = "0.3.2"
 
         }
 
         kubernetes = {
 
             source  = "hashicorp/kubernetes"
-            version = "2.0.0"
+            version = "2.0.3"
 
         }
 
         aws = {
 
             source  = "hashicorp/aws"
-            version = "3.30.0"
+            version = "3.35.0"
 
         }
 
