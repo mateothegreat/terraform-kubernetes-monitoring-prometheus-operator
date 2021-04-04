@@ -83,9 +83,7 @@ resource "kubernetes_manifest" "kube-state-metrics-deployment" {
                         }
                     }
                 ],
-                "nodeSelector": {
-                    "kubernetes.io/os": "linux"
-                },
+                "nodeSelector": var.node_selector
                 "serviceAccountName": "kube-state-metrics"
             }
         }

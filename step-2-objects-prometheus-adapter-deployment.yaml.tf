@@ -66,9 +66,7 @@ resource "kubernetes_manifest" "prometheus-adapter-deployment" {
                         ]
                     }
                 ],
-                "nodeSelector": {
-                    "role": "services"
-                },
+                "nodeSelector": var.node_selector
                 "serviceAccountName": "prometheus-adapter",
                 "volumes": [
                     {

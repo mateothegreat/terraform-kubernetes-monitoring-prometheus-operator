@@ -5,6 +5,16 @@ variable "operator_namespace" {
 
 }
 
+
+variable "node_selector" {
+
+    type        = map(string)
+    description = "restrict pods to run on this specification where there is not a specific node selector variable"
+    default     = {}
+
+}
+
+
 variable "grafana_enabled" {
 
     type        = bool
