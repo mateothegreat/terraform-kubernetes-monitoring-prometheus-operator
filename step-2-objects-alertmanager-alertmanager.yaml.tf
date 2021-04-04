@@ -1,6 +1,6 @@
 resource "kubernetes_manifest" "alertmanager-alertmanager" {
 
-    depends_on = [ resource.kubernetes_manifest.crd-alertmanager ]
+    depends_on = [ kubernetes_manifest.crd-alertmanager ]
 
     provider = kubernetes-alpha
 
