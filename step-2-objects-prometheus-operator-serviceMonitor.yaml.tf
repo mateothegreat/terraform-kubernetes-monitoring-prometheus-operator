@@ -1,5 +1,7 @@
 resource "kubernetes_manifest" "prometheus-operator-serviceMonitor" {
 
+    depends_on = [ kubernetes_manifest.crd-servicemonitors ]
+
     provider = kubernetes-alpha
 
     manifest = {
