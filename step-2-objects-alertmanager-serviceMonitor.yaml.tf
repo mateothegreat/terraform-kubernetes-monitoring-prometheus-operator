@@ -1,5 +1,7 @@
 resource "kubernetes_manifest" "alertmanager-serviceMonitor" {
 
+    depends_on = [ kubernetes_manifest.crd-alertmanager ]
+
     provider = kubernetes-alpha
 
     manifest = {

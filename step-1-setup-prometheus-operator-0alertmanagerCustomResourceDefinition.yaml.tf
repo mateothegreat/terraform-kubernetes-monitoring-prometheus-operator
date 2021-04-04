@@ -1,4 +1,4 @@
-resource "kubernetes_manifest" "alertmanagers_monitoring_coreos_com" {
+resource "kubernetes_manifest" "crd-alertmanager" {
 
     provider = kubernetes-alpha
 
