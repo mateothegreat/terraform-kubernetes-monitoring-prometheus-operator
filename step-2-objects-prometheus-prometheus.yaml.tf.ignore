@@ -1,0 +1,7 @@
+resource "kubernetes_manifest" "prometheus-prometheus" {
+
+    provider = kubernetes-alpha
+
+    manifest = null
+
+}
